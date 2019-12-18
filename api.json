@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Eyevinn Media Function::Probe",
+    "description": "A serverless media function to obtain media info of a video file or video stream",
+    "version": "0.1"
+  },
+  "basePath": "/",
+  "paths": {
+    "/api": {
+      "post": {
+        "summary": "Probe a video file or video stream",
+        "requestBody": {
+          "required": "true",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/model/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Media information",
+            "content": {
+              "application/json": {
+                "type": "object"                
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "model": {
+    "request": {
+      "type": "object",
+      "required": [ "medialocator" ],
+      "properties": {
+        "medialocator": {
+          "type": "string",
+          "description": "URL to video file or video stream"
+        }
+      }
+    }
+  }
+}

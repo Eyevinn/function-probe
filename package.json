@@ -1,0 +1,21 @@
+{
+  "name": "@eyevinn/function-probe",
+  "version": "0.1.0",
+  "description": "Serverless Media Function to obtain Media Info of a video file or video stream",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jonas Rydholm Birmé",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "restify": "^8.5.1",
+    "restify-errors": "^8.0.2",
+    "swagger-ui-restify": "^3.0.8"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2"
+  }
+}
