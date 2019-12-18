@@ -16,8 +16,12 @@ server.get("/healthcheck", (req, res, next) => {
   next();
 });
 
+const options = {
+  customCss: ".swagger-ui .topbar { background-color: #61B5E5 }"
+};
+
 server.get("/*", ...SwaggerUI.serve);
-server.get("/", SwaggerUI.setup(apiDocument));
+server.get("/", SwaggerUI.setup(apiDocument, options));
 
 server.post("/api", (req, res, next) => {
   debug(`req.url=${req.url}`);

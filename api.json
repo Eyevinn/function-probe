@@ -1,9 +1,13 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Eyevinn Media Function::Probe",
+    "title": "Eyevinn MediaFunction::Probe",
     "description": "A serverless media function to obtain media info of a video file or video stream",
-    "version": "0.1"
+    "version": "0.1",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    }
   },
   "basePath": "/",
   "paths": {
@@ -24,9 +28,7 @@
           "200": {
             "description": "Media information",
             "content": {
-              "application/json": {
-                "type": "object"                
-              }
+              "application/json": {}
             }
           }
         }
@@ -42,6 +44,9 @@
           "type": "string",
           "description": "URL to video file or video stream"
         }
+      },
+      "example": {
+        "medialocator": "https://testcontent.eyevinn.technology/stswe19/Fraunhofer_updated_v2.mp4"
       }
     }
   }

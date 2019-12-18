@@ -10,7 +10,13 @@ The media function is available as a Docker container:
 $ docker run --rm -p 8080:8080 eyevinntechnology/function-probe
 ```
 
-Then open your browser and go to `http://localhost:8080/` for the API documentation and if you want to manually try it out.
+Then open your browser and go to `http://localhost:8080/` for the API documentation where you also can directly try it out.
+
+Another example is to use `curl` or Postman:
+
+```
+$ curl -X POST "http://localhost:8080/api" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"medialocator\":\"https://testcontent.eyevinn.technology/stswe19/Fraunhofer_updated_v2.mp4\"}"
+```
 
 ## LICENSE
 
