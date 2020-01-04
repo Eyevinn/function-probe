@@ -6,6 +6,9 @@ metadata:
     app: function-probe
 spec:
   replicas: 2
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 50%
   selector:
     matchLabels:
       app: function-probe
