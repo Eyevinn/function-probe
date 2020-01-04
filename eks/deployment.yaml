@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: function-probe-deployment
+  labels:
+    app: function-probe
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: function-probe
+  template:
+    metadata:
+      labels:
+        app: function-probe
+    spec:
+      containers:
+        - name: function-probe
+          image: eyevinntechnology/function-probe:0.1.1
+          ports:
+            - containerPort: 8080
+              protocol: TCP
