@@ -18,4 +18,4 @@ jobs:
           REGION: eu-north-1
           CLUSTER: mediafunctions
         with:
-          args: set image deployment/dsp dsp=590877988961.dkr.ecr.eu-north-1.amazonaws.com/function-probe:${{ steps.get_version.outputs.VERSION }} --record
+          args: set image deployment/function-probe-deployment function-probe=590877988961.dkr.ecr.eu-north-1.amazonaws.com/function-probe:${{ steps.get_version.outputs.VERSION }} --record
