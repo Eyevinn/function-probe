@@ -1,6 +1,6 @@
 {
   "name": "@eyevinn/function-probe",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Serverless Media Function to obtain Media Info of a video file or video stream",
   "main": "index.js",
   "scripts": {
