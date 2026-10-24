@@ -21,7 +21,12 @@ const options = {
 };
 
 server.get("/*", ...SwaggerUI.serve);
-server.get("/", SwaggerUI.setup(apiDocument, options));
+// swagger-ui-restify returns a (req, res) handler that is not async, which restify 12 rejects
+const swaggerSetup = SwaggerUI.setup(apiDocument, options);
+server.get("/", (req, res, next) => {
+  swaggerSetup(req, res);
+  next();
+});
 
 server.post("/api", (req, res, next) => {
   debug(`req.url=${req.url}`);
