@@ -8,10 +8,13 @@
   },
   "author": "Jonas Rydholm Birmé",
   "license": "Apache-2.0",
+  "engines": {
+    "node": "^22.23.4 || >=24.22.1"
+  },
   "dependencies": {
     "debug": "^4.1.1",
     "fluent-ffmpeg": "^2.1.2",
-    "restify": "^8.5.1",
+    "restify": "^12.1.0",
     "restify-errors": "^8.0.2",
     "swagger-ui-restify": "^3.0.8"
   },
